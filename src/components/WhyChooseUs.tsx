@@ -1,46 +1,38 @@
 import { Award, UserCheck, Clock, MapPin, TrendingUp, FileCheck } from "lucide-react";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 const features = [
-  { icon: Award, title: "Certified Instructors", desc: "Government licensed & trained professionals" },
-  { icon: UserCheck, title: "Female Instructor Available", desc: "Comfortable learning for all students" },
-  { icon: Clock, title: "Flexible Timings", desc: "Morning, afternoon & weekend batches" },
-  { icon: MapPin, title: "Pickup & Drop", desc: "Door-to-door convenience for students" },
-  { icon: TrendingUp, title: "95% Pass Rate", desc: "Proven track record of success" },
-  { icon: FileCheck, title: "RTO Documentation", desc: "Complete assistance with paperwork" },
+  { icon: Award, title: "Certified Instructors", desc: "Govt. licensed professionals" },
+  { icon: UserCheck, title: "Female Instructor", desc: "Available on request" },
+  { icon: Clock, title: "Flexible Timings", desc: "Morning & weekend slots" },
+  { icon: MapPin, title: "Pickup & Drop", desc: "Door-to-door service" },
+  { icon: TrendingUp, title: "95% Pass Rate", desc: "Proven success record" },
+  { icon: FileCheck, title: "RTO Assistance", desc: "Full paperwork support" },
 ];
 
 const WhyChooseUs = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
   return (
-    <section id="why-us" className="section-spacing bg-card">
-      <div className="container">
-        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-1">Why Choose Us</h2>
-        <p className="text-sm text-muted-foreground mb-8">What sets DriveSmart apart</p>
+    <section id="why-us" className="py-10 bg-card">
+      <div className="section-padding">
+        <h2 className="text-lg font-bold text-foreground mb-0.5">Why Choose Us</h2>
+        <p className="text-xs text-muted-foreground mb-4">What sets DriveSmart apart</p>
+      </div>
 
-        <div ref={ref} className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {features.map((f, i) => {
-            const Icon = f.icon;
-            return (
-              <motion.div
-                key={f.title}
-                initial={{ opacity: 0, y: 15 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.35, delay: i * 0.08 }}
-                className="flex flex-col items-center text-center p-4 rounded-xl bg-background"
-              >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
-                  <Icon className="w-5 h-5 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground text-sm mb-0.5">{f.title}</h3>
-                <p className="text-xs text-muted-foreground leading-snug">{f.desc}</p>
-              </motion.div>
-            );
-          })}
-        </div>
+      <div className="flex gap-3 overflow-x-auto scroll-snap-x hide-scrollbar px-4 sm:px-6 pb-3">
+        {features.map((f) => {
+          const Icon = f.icon;
+          return (
+            <div
+              key={f.title}
+              className="min-w-[130px] sm:min-w-[150px] shrink-0 bg-background rounded-xl border p-3.5 flex flex-col items-start"
+            >
+              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
+                <Icon className="w-4 h-4 text-primary" />
+              </div>
+              <h3 className="font-semibold text-foreground text-xs leading-tight mb-0.5">{f.title}</h3>
+              <p className="text-[11px] text-muted-foreground leading-snug">{f.desc}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

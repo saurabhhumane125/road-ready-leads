@@ -19,7 +19,7 @@ const Header = () => {
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">DS</span>
           </div>
-          <span className="font-bold text-foreground text-base sm:text-lg">DriveSmart</span>
+          <span className="font-bold text-foreground text-base sm:text-lg">CLASSIC MOTOR TRAINING SCHOOL</span>
         </a>
 
         {/* Desktop nav */}
@@ -34,7 +34,7 @@ const Header = () => {
             </a>
           ))}
           <a
-            href="tel:+919876543210"
+            href="tel:+918355892201"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
           >
             <Phone className="w-4 h-4" />
@@ -67,7 +67,7 @@ const Header = () => {
           ))}
           <div className="px-4 pt-2">
             <a
-              href="tel:+919876543210"
+              href="tel:+918355892201"
               className="flex items-center justify-center gap-2 bg-primary text-primary-foreground w-full py-3 rounded-xl text-sm font-semibold"
             >
               <Phone className="w-4 h-4" />

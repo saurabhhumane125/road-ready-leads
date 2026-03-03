@@ -5,10 +5,10 @@ const Footer = () => (
         <div className="w-7 h-7 rounded-full bg-primary flex items-center justify-center">
           <span className="text-primary-foreground font-bold text-xs">DS</span>
         </div>
-        <span className="font-bold text-background text-base">DriveSmart</span>
+        <span className="font-bold text-background text-base">CLASSIC MOTOR TRAINING SCHOOL</span>
       </div>
       <p className="text-sm mb-2">Professional Driving School in Ahmedabad</p>
-      <p className="text-xs text-background/50">© 2025 DriveSmart Motor Training School. All rights reserved.</p>
+      <p className="text-xs text-background/50">© 2025 CLASSIC MOTOR TRAINING SCHOOL. All rights reserved.</p>
     </div>
   </footer>
 );

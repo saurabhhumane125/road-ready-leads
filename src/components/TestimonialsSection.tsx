@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     name: "Rahul Patel",
-    review: "Very professional training. The dual control car gave me a lot of confidence. Highly recommend DriveSmart to everyone.",
+    review: "Very professional training. The dual control car gave me a lot of confidence. Highly recommend CLASSIC MOTOR TRAINING SCHOOL to everyone.",
     rating: 5,
   },
   {

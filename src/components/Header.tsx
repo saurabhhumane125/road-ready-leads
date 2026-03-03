@@ -16,7 +16,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b">
       <div className="container flex items-center justify-between h-14 sm:h-16">
         <a href="#" className="flex items-center gap-2">
-          <img src="/logo.png" alt="Classic Motor Training School logo" className="w-8 h-8 rounded-full" />
+          <img src="/logo.png" alt="Classic Motor Training School logo" className="w-12 h-12 rounded-full" />
           <span className="font-bold text-foreground text-base sm:text-lg">CLASSIC MOTOR TRAINING SCHOOL</span>
         </a>
 

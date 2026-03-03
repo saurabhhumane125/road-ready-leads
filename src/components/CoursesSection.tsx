@@ -33,6 +33,7 @@ const courses = [
   },
   {
     icon: Bike,
+    image: "/twowheeler.png",
     title: "Two-Wheeler Training",
     duration: "15 Days",
     price: "₹3,000",

@@ -55,13 +55,13 @@ const ContactSection = () => (
 
       {/* Map placeholder */}
       <a
-        href="https://www.google.com/maps?q=19.0040857,73.1216752&z=17"
+        href="https://www.google.com/maps/dir/19.2195747,73.1253813/Classic+Motor+Training+School+New+Panvel,+Shop+no+03,+Plot+no+33-34,+Sector-9,+New+Panvel+East,+Panvel,+Navi+Mumbai,+Maharashtra+410206/@19.0872104,72.9880767,11z"
         target="_blank"
         rel="noopener noreferrer"
         className="block rounded-xl overflow-hidden border bg-muted h-48 sm:h-64"
       >
         <iframe
-          src="https://www.google.com/maps?q=19.0040857,73.1216752&z=17&output=embed"
+          src="https://www.google.com/maps/dir/19.2195747,73.1253813/Classic+Motor+Training+School+New+Panvel,+Shop+no+03,+Plot+no+33-34,+Sector-9,+New+Panvel+East,+Panvel,+Navi+Mumbai,+Maharashtra+410206/@19.0872104,72.9880767,11z&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}

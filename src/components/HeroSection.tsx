@@ -24,7 +24,7 @@ const HeroSection = () => {
           className="max-w-lg"
         >
           <h1 className="text-[22px] sm:text-[28px] lg:text-4xl font-extrabold leading-tight text-primary-foreground mb-3">
-            Professional Driving Lessons in Ahmedabad
+            Professional Driving Lessons in Panvel
           </h1>
           <div className="flex flex-col gap-2 mb-6">
             {[

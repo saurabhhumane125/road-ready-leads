@@ -20,7 +20,7 @@ const StickyCTABar = () => (
         <span className="text-[10px] font-semibold">WhatsApp</span>
       </a>
       <a
-        href="https://maps.google.com/?q=Satellite+Ahmedabad"
+        href="https://maps.google.com/?q=Panvel"
         target="_blank"
         rel="noopener noreferrer"
         className="flex flex-col items-center gap-0.5 py-2.5 text-primary hover:bg-muted transition-colors"

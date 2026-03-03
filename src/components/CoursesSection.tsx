@@ -1,5 +1,6 @@
 import { Car, Bike, RefreshCw, ShieldAlert } from "lucide-react";
 import placeholderImg from "@/assets/placeholder.png";
+import lmvPng from "@/assets/lmv.png";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
@@ -14,6 +15,7 @@ import {
 const courses = [
   {
     icon: Car,
+    image: lmvPng,
     title: "LMV (Car Training)",
     duration: "30 Days",
     price: "₹6,500",
@@ -105,7 +107,11 @@ const CoursesSection = () => {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="min-w-[85%] sm:min-w-[300px] lg:min-w-0 lg:flex-1 bg-card rounded-xl border p-5 flex flex-col text-left transition-shadow hover:shadow-md active:scale-[0.98]"
             >
-              <img src={placeholderImg} alt="Course image" className="w-full h-32 object-cover rounded-lg mb-3" />
+              <img
+              src={course.image || placeholderImg}
+              alt="Course image"
+              className="w-full h-32 object-cover rounded-lg mb-3"
+            />
               <div className={`w-10 h-10 ${course.color} rounded-lg flex items-center justify-center mb-3`}>
                 <Icon className="w-5 h-5 text-primary-foreground" />
               </div>

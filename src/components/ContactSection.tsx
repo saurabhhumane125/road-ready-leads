@@ -48,7 +48,7 @@ const ContactSection = () => (
           </div>
           <div>
             <p className="text-xs text-muted-foreground">Location</p>
-            <p className="font-semibold text-sm text-foreground">Satellite, Ahmedabad</p>
+            <p className="font-semibold text-sm text-foreground">Classic Motor Training School, New Panvel</p>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ const ContactSection = () => (
       {/* Map placeholder */}
       <div className="rounded-xl overflow-hidden border bg-muted h-48 sm:h-64 flex items-center justify-center">
         <iframe
-          src="https://maps.app.goo.gl/UoMBi6YR3dqsvZxJ8"
+          src="https://www.google.com/maps?q=19.0040857,73.1216752&z=17&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}

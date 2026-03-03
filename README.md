@@ -1,18 +1,16 @@
-# Welcome to your Lovable project
+# Welcome to your project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**URL**: https://<your-host>/projects/REPLACE_WITH_PROJECT_ID
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+[**Use the provided web editor**](#) or edit directly in your IDE.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+Changes pushed to this repo will deploy as needed.
 
 **Use your preferred IDE**
 
@@ -62,12 +60,13 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Build and deploy the application using your preferred hosting service. For example:
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+npm run build
+# deploy the contents of dist/ or build/ to your server or static host
+```
 
-Yes, you can!
+## Can I connect a custom domain?
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Yes! Configure your hosting provider to point to the deployed site and update DNS records accordingly.

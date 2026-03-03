@@ -54,7 +54,12 @@ const ContactSection = () => (
       </div>
 
       {/* Map placeholder */}
-      <div className="rounded-xl overflow-hidden border bg-muted h-48 sm:h-64 flex items-center justify-center">
+      <a
+        href="https://www.google.com/maps?q=19.0040857,73.1216752&z=17"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block rounded-xl overflow-hidden border bg-muted h-48 sm:h-64"
+      >
         <iframe
           src="https://www.google.com/maps?q=19.0040857,73.1216752&z=17&output=embed"
           width="100%"
@@ -65,7 +70,7 @@ const ContactSection = () => (
           referrerPolicy="no-referrer-when-downgrade"
           title="CLASSIC MOTOR TRAINING SCHOOL Location"
         />
-      </div>
+      </a>
     </div>
   </section>
 );

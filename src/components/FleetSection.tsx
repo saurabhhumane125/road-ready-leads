@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   Dialog,
   DialogContent,
@@ -9,56 +8,51 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 
+import fleetWagonr from "@/assets/fleet-wagonr.jpg";
+import fleetAura from "@/assets/fleet-aura.jpg";
+import fleetDzire from "@/assets/fleet-dzire.jpg";
+import fleetHero from "@/assets/fleet-hero.jpg";
+
 const vehicles = [
   {
-    name: "Maruti Swift",
+    name: "Maruti WagonR",
     type: "Hatchback",
-    emoji: "🚗",
+    image: fleetWagonr,
     tag: "Most Popular",
     feature: "Dual Control",
     description:
-      "India's favourite hatchback — easy to handle, great for city driving. Fitted with dual controls for safe learning.",
+      "India's trusted hatchback — spacious cabin, easy handling, and fitted with dual controls for safe learning on city roads.",
     specs: ["Dual Control Pedals", "Power Steering", "AC Cabin", "Instructor-Monitored"],
   },
   {
-    name: "Hyundai i20",
-    type: "Premium Hatchback",
-    emoji: "🚙",
-    tag: null,
-    feature: "Dual Control",
-    description:
-      "A premium cabin experience. Learn driving with comfort and confidence in one of India's top-selling cars.",
-    specs: ["Dual Control Pedals", "Premium Interior", "Smooth Clutch", "Highway Ready"],
-  },
-  {
-    name: "Maruti Dzire",
+    name: "Hyundai Aura",
     type: "Sedan",
-    emoji: "🚘",
+    image: fleetAura,
     tag: "Sedan Training",
     feature: "Dual Control",
     description:
-      "Perfect for learning sedan handling, parking, and highway driving. Spacious and stable on all roads.",
-    specs: ["Dual Control Pedals", "Sedan Body Feel", "Boot Parking Practice", "AC Cabin"],
+      "Learn sedan driving with comfort and confidence. Perfect for mastering parking, highway driving, and smooth gear shifts.",
+    specs: ["Dual Control Pedals", "Sedan Body Feel", "Smooth Clutch", "Highway Ready"],
   },
   {
-    name: "Honda Activa",
-    type: "Scooter",
-    emoji: "🛵",
-    tag: "Two-Wheeler",
-    feature: "Auto Gear",
+    name: "Swift Dzire",
+    type: "Sedan",
+    image: fleetDzire,
+    tag: null,
+    feature: "Dual Control",
     description:
-      "The most popular scooter in India. Learn balance, traffic handling, and confident riding on familiar roads.",
-    specs: ["Automatic Transmission", "Light & Easy", "Traffic Training", "Beginner Friendly"],
+      "One of India's best-selling sedans. Practice real-world driving — city traffic, parking, and highway cruising with full instructor support.",
+    specs: ["Dual Control Pedals", "Boot Parking Practice", "AC Cabin", "RTO Test Ready"],
   },
   {
-    name: "Hero Splendor",
+    name: "Hero Honda",
     type: "Motorcycle",
-    emoji: "🏍️",
+    image: fleetHero,
     tag: "Two-Wheeler",
     feature: "Manual Gear",
     description:
-      "Master gear shifting, clutch control, and road confidence on India's most trusted motorcycle.",
-    specs: ["Manual Gear Shift", "Clutch Training", "Road Safety Drills", "Highway Practice"],
+      "Master gear shifting, clutch control, and road confidence on India's most trusted motorcycle. Ideal for beginners.",
+    specs: ["Manual Gear Shift", "Clutch Training", "Road Safety Drills", "Traffic Practice"],
   },
 ];
 
@@ -79,54 +73,72 @@ const FleetSection = () => {
           <button
             key={v.name}
             onClick={() => setSelected(v)}
-            className="min-w-[80%] sm:min-w-[320px] lg:min-w-0 lg:flex-1 bg-card rounded-xl border p-5 flex flex-col items-start text-left transition-shadow hover:shadow-md active:scale-[0.98]"
+            className="min-w-[80%] sm:min-w-[320px] lg:min-w-0 lg:flex-1 rounded-xl border overflow-hidden flex flex-col text-left transition-shadow hover:shadow-md active:scale-[0.98] relative"
           >
-            {v.tag && (
-              <span className="text-[11px] font-semibold text-primary bg-primary/10 px-2.5 py-0.5 rounded-full mb-3">
-                {v.tag}
-              </span>
-            )}
-            <span className="text-4xl mb-3">{v.emoji}</span>
-            <h3 className="font-bold text-foreground text-base">{v.name}</h3>
-            <p className="text-sm text-muted-foreground mb-1">{v.type}</p>
-            <div className="flex items-center gap-1.5 mt-auto pt-3 text-primary text-sm font-medium">
-              <span>{v.feature}</span>
-              <ChevronRight className="w-4 h-4" />
+            {/* Background image with overlay */}
+            <div className="relative h-44 w-full">
+              <img
+                src={v.image}
+                alt={v.name}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              {v.tag && (
+                <span className="absolute top-3 left-3 text-[11px] font-semibold text-primary-foreground bg-primary px-2.5 py-0.5 rounded-full">
+                  {v.tag}
+                </span>
+              )}
+              <div className="absolute bottom-3 left-4 right-4">
+                <h3 className="font-bold text-white text-base">{v.name}</h3>
+                <p className="text-sm text-white/80">{v.type}</p>
+              </div>
+            </div>
+            <div className="p-4 bg-card">
+              <div className="flex items-center gap-1.5 text-primary text-sm font-medium">
+                <span>{v.feature}</span>
+                <ChevronRight className="w-4 h-4" />
+              </div>
             </div>
           </button>
         ))}
       </div>
 
       <Dialog open={!!selected} onOpenChange={() => setSelected(null)}>
-        <DialogContent className="max-w-sm mx-auto rounded-2xl">
+        <DialogContent className="max-w-sm mx-auto rounded-2xl p-0 overflow-hidden">
           {selected && (
             <>
-              <DialogHeader>
-                <div className="text-5xl mb-2">{selected.emoji}</div>
-                <DialogTitle className="text-xl">{selected.name}</DialogTitle>
-                <DialogDescription className="text-sm">
-                  {selected.type} · {selected.feature}
-                </DialogDescription>
-              </DialogHeader>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {selected.description}
-              </p>
-              <div className="space-y-2 mt-2">
-                <p className="text-xs font-semibold text-foreground uppercase tracking-wider">What you get</p>
-                {selected.specs.map((s) => (
-                  <div key={s} className="flex items-center gap-2 text-sm text-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                    {s}
-                  </div>
-                ))}
+              <img
+                src={selected.image}
+                alt={selected.name}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-5">
+                <DialogHeader>
+                  <DialogTitle className="text-xl">{selected.name}</DialogTitle>
+                  <DialogDescription className="text-sm">
+                    {selected.type} · {selected.feature}
+                  </DialogDescription>
+                </DialogHeader>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-3">
+                  {selected.description}
+                </p>
+                <div className="space-y-2 mt-4">
+                  <p className="text-xs font-semibold text-foreground uppercase tracking-wider">What you get</p>
+                  {selected.specs.map((s) => (
+                    <div key={s} className="flex items-center gap-2 text-sm text-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                      {s}
+                    </div>
+                  ))}
+                </div>
+                <a
+                  href="#booking"
+                  onClick={() => setSelected(null)}
+                  className="block text-center bg-primary text-primary-foreground font-semibold py-3 rounded-xl text-sm mt-4 hover:opacity-90 transition-opacity"
+                >
+                  Book This Vehicle
+                </a>
               </div>
-              <a
-                href="#booking"
-                onClick={() => setSelected(null)}
-                className="block text-center bg-primary text-primary-foreground font-semibold py-3 rounded-xl text-sm mt-4 hover:opacity-90 transition-opacity"
-              >
-                Book This Vehicle
-              </a>
             </>
           )}
         </DialogContent>

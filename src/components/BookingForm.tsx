@@ -20,7 +20,17 @@ const BookingForm = () => {
       toast.error("Please enter a valid 10-digit phone number");
       return;
     }
-    toast.success("Booking submitted! We'll call you shortly.");
+    const now = new Date().toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" });
+    const courseLabels: Record<string, string> = {
+      lmv: "LMV (Car Training)",
+      "two-wheeler": "Two-Wheeler Training",
+      refresher: "Refresher Course",
+      defensive: "Defensive Driving",
+    };
+    const message = `New Booking Request\n\nName: ${form.name.trim()}\nPhone: ${form.phone.trim()}\nCourse: ${courseLabels[form.course] || form.course}\nTime: ${now}`;
+    const url = `https://wa.me/917208317436?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    toast.success("Redirecting to WhatsApp...");
     setForm({ name: "", phone: "", course: "", time: "", area: "" });
   };
 

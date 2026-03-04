@@ -1,6 +1,4 @@
 import { Car, Bike, RefreshCw, ShieldAlert } from "lucide-react";
-import placeholderImg from "@/assets/placeholder.png";
-import lmvPng from "@/assets/lmv.png";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
@@ -12,10 +10,15 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 
+import courseLmv from "@/assets/course-lmv.jpg";
+import courseTwowheeler from "@/assets/course-twowheeler.jpg";
+import courseRefresher from "@/assets/course-refresher.jpg";
+import courseDefensive from "@/assets/course-defensive.jpg";
+
 const courses = [
   {
     icon: Car,
-    image: lmvPng,
+    image: courseLmv,
     title: "LMV (Car Training)",
     duration: "30 Days",
     price: "₹6,500",
@@ -33,7 +36,7 @@ const courses = [
   },
   {
     icon: Bike,
-    image: "/twowheeler.png",
+    image: courseTwowheeler,
     title: "Two-Wheeler Training",
     duration: "15 Days",
     price: "₹3,000",
@@ -50,6 +53,7 @@ const courses = [
   },
   {
     icon: RefreshCw,
+    image: courseRefresher,
     title: "Refresher Course",
     duration: "10 Days",
     price: "₹4,000",
@@ -65,6 +69,7 @@ const courses = [
   },
   {
     icon: ShieldAlert,
+    image: courseDefensive,
     title: "Defensive Driving",
     duration: "7 Days",
     price: "₹5,000",
@@ -106,24 +111,26 @@ const CoursesSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="min-w-[85%] sm:min-w-[300px] lg:min-w-0 lg:flex-1 bg-card rounded-xl border p-5 flex flex-col text-left transition-shadow hover:shadow-md active:scale-[0.98]"
+              className="min-w-[85%] sm:min-w-[300px] lg:min-w-0 lg:flex-1 bg-card rounded-xl border overflow-hidden flex flex-col text-left transition-shadow hover:shadow-md active:scale-[0.98]"
             >
               <img
-              src={course.image || placeholderImg}
-              alt="Course image"
-              className="w-full h-32 object-cover rounded-lg mb-3"
-            />
-              <div className={`w-10 h-10 ${course.color} rounded-lg flex items-center justify-center mb-3`}>
-                <Icon className="w-5 h-5 text-primary-foreground" />
+                src={course.image}
+                alt={course.title}
+                className="w-full h-36 object-cover"
+              />
+              <div className="p-4 flex flex-col flex-1">
+                <div className={`w-10 h-10 ${course.color} rounded-lg flex items-center justify-center mb-3`}>
+                  <Icon className="w-5 h-5 text-primary-foreground" />
+                </div>
+                <h3 className="font-bold text-foreground text-base mb-1">{course.title}</h3>
+                <div className="flex items-center gap-3 text-sm text-muted-foreground mb-2">
+                  <span>{course.duration}</span>
+                  <span className="w-1 h-1 rounded-full bg-muted-foreground" />
+                  <span className="font-semibold text-primary">{course.price}</span>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4 flex-1">{course.description}</p>
+                <span className="text-sm text-primary font-medium">View Details →</span>
               </div>
-              <h3 className="font-bold text-foreground text-base mb-1">{course.title}</h3>
-              <div className="flex items-center gap-3 text-sm text-muted-foreground mb-2">
-                <span>{course.duration}</span>
-                <span className="w-1 h-1 rounded-full bg-muted-foreground" />
-                <span className="font-semibold text-primary">{course.price}</span>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4 flex-1">{course.description}</p>
-              <span className="text-sm text-primary font-medium">View Details →</span>
             </motion.button>
           );
         })}

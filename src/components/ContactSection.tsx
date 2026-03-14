@@ -48,7 +48,7 @@ const ContactSection = () => (
           </div>
           <div>
             <p className="text-xs text-muted-foreground">Location</p>
-            <p className="font-semibold text-sm text-foreground">Classic Motor Training School, New Panvel</p>
+            <p className="font-semibold text-sm text-foreground">Road Ready Driving School, New Panvel</p>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ const ContactSection = () => (
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="CLASSIC MOTOR TRAINING SCHOOL Location"
+          title="ROAD READY DRIVING SCHOOL Location"
         />
       </a>
     </div>

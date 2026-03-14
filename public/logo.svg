@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Outer circle background -->
+  <circle cx="100" cy="100" r="98" fill="#1a4a9c"/>
+  <!-- Red accent border ring -->
+  <circle cx="100" cy="100" r="98" fill="none" stroke="#cc2929" stroke-width="5"/>
+  <!-- Inner subtle ring -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+  <!-- Steering wheel outer ring -->
+  <circle cx="100" cy="88" r="46" fill="none" stroke="white" stroke-width="8"/>
+  <!-- Steering wheel center hub -->
+  <circle cx="100" cy="88" r="11" fill="white"/>
+
+  <!-- Top spoke -->
+  <rect x="96" y="42" width="8" height="35" rx="4" fill="white"/>
+  <!-- Bottom-left spoke -->
+  <rect x="96" y="53" width="8" height="35" rx="4" fill="white" transform="rotate(120 100 88)"/>
+  <!-- Bottom-right spoke -->
+  <rect x="96" y="53" width="8" height="35" rx="4" fill="white" transform="rotate(240 100 88)"/>
+
+  <!-- Divider -->
+  <line x1="32" y1="147" x2="168" y2="147" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+
+  <!-- Company name -->
+  <text x="100" y="164" text-anchor="middle" fill="white" font-size="13" font-family="Arial, sans-serif" font-weight="800" letter-spacing="2">ROAD READY</text>
+  <text x="100" y="180" text-anchor="middle" fill="#fbbf24" font-size="9" font-family="Arial, sans-serif" letter-spacing="1.5" font-weight="600">DRIVING SCHOOL</text>
+</svg>

@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
     <section id="why-us" className="section-spacing bg-card">
       <div className="section-padding">
         <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-1">Why Choose Us</h2>
-        <p className="text-sm text-muted-foreground mb-6">What sets CLASSIC MOTOR TRAINING SCHOOL apart</p>
+        <p className="text-sm text-muted-foreground mb-6">What sets ROAD READY DRIVING SCHOOL apart</p>
       </div>
 
       <div className="flex gap-4 overflow-x-auto scroll-snap-x hide-scrollbar px-4 sm:px-6 pb-4">

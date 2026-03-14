@@ -47,7 +47,7 @@ const HeroSection = () => {
               Book a Demo Class
             </a>
             <a
-              href="tel:+918355892201"
+              href="tel:+918779663354"
               className="flex items-center justify-center gap-2 bg-primary-foreground/20 backdrop-blur text-primary-foreground font-semibold py-3.5 px-6 rounded-xl text-base w-full sm:w-auto border border-primary-foreground/30 hover:bg-primary-foreground/30 transition-colors"
             >
               <Phone className="w-4 h-4" />

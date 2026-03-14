@@ -28,7 +28,7 @@ const BookingForm = () => {
       defensive: "Defensive Driving",
     };
     const message = `New Booking Request\n\nName: ${form.name.trim()}\nPhone: ${form.phone.trim()}\nCourse: ${courseLabels[form.course] || form.course}\nTime: ${now}`;
-    const url = `https://wa.me/917208317436?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/918779663354?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank", "noopener,noreferrer");
     toast.success("Redirecting to WhatsApp...");
     setForm({ name: "", phone: "", course: "", time: "", area: "" });

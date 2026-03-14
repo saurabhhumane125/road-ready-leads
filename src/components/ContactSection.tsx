@@ -8,7 +8,7 @@ const ContactSection = () => (
 
       <div className="grid sm:grid-cols-2 gap-4 mb-6">
         <a
-          href="tel:+918355892201"
+          href="tel:+918779663354"
           className="flex items-center gap-3 bg-card rounded-xl border p-4 hover:border-primary/30 transition-colors"
         >
           <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -20,7 +20,7 @@ const ContactSection = () => (
           </div>
         </a>
         <a
-          href="https://wa.me/918355892201?text=Hi%2C%20I%20want%20to%20enquire%20about%20driving%20classes."
+          href="https://wa.me/918779663354?text=Hi%2C%20I%20want%20to%20enquire%20about%20driving%20classes."
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 bg-card rounded-xl border p-4 hover:border-whatsapp/30 transition-colors"

@@ -32,7 +32,7 @@ const Header = () => {
             </a>
           ))}
           <a
-            href="tel:+918355892201"
+            href="tel:+918779663354"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
           >
             <Phone className="w-4 h-4" />
@@ -65,7 +65,7 @@ const Header = () => {
           ))}
           <div className="px-4 pt-2">
             <a
-              href="tel:+918355892201"
+              href="tel:+918779663354"
               className="flex items-center justify-center gap-2 bg-primary text-primary-foreground w-full py-3 rounded-xl text-sm font-semibold"
             >
               <Phone className="w-4 h-4" />

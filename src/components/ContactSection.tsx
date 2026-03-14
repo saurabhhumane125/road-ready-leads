@@ -48,27 +48,27 @@ const ContactSection = () => (
           </div>
           <div>
             <p className="text-xs text-muted-foreground">Location</p>
-            <p className="font-semibold text-sm text-foreground">Road Ready Driving School, New Panvel</p>
+            <p className="font-semibold text-sm text-foreground">Road Ready Driving School, Mumbai</p>
           </div>
         </div>
       </div>
 
-      {/* Map placeholder */}
+      {/* Map */}
       <a
-        href="https://www.google.com/maps/dir/19.2195747,73.1253813/Classic+Motor+Training+School+New+Panvel,+Shop+no+03,+Plot+no+33-34,+Sector-9,+New+Panvel+East,+Panvel,+Navi+Mumbai,+Maharashtra+410206/@19.0872104,72.9880767,11z"
+        href="https://www.google.com/maps/search/Mumbai,+Maharashtra"
         target="_blank"
         rel="noopener noreferrer"
         className="block rounded-xl overflow-hidden border bg-muted h-48 sm:h-64"
       >
         <iframe
-          src="https://www.google.com/maps?q=19.0040857,73.1216752&z=17&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823322!2d72.74109995!3d19.08250095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="ROAD READY DRIVING SCHOOL Location"
+          title="Road Ready Driving School - Mumbai Location"
         />
       </a>
     </div>

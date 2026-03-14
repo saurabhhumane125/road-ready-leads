@@ -16,7 +16,7 @@ const ContactSection = () => (
           </div>
           <div>
             <p className="text-xs text-muted-foreground">Call Us</p>
-            <p className="font-semibold text-sm text-foreground">+91 83558 92201</p>
+            <p className="font-semibold text-sm text-foreground">+91 87796 63354</p>
           </div>
         </a>
         <a
@@ -30,7 +30,7 @@ const ContactSection = () => (
           </div>
           <div>
             <p className="text-xs text-muted-foreground">WhatsApp</p>
-            <p className="font-semibold text-sm text-foreground">+91 83558 92201</p>
+            <p className="font-semibold text-sm text-foreground">+91 87796 63354</p>
           </div>
         </a>
         <div className="flex items-center gap-3 bg-card rounded-xl border p-4">
